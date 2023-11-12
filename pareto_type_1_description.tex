@@ -1,0 +1,26 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\title{Pareto distribution (type 1)}
+
+\begin{document}
+\maketitle
+
+The Pareto distribution (type 1) is defined via two parameters:
+\begin{enumerate}
+  \item $a > 0$ : the shape.
+  \item $m > 0$ : the scale.
+\end{enumerate}
+
+The probability density function $f_{a,m}$ of the Pareto distribution (type 1) with shape $a$ and scale $m$ is defined via, for all $x \geq m$,
+$$ f_{a,m}(x) = \frac{a m^{a}}{x^{a+1}} $$
+
+Given a sample $(x_i)_{1 \leq i \leq n}$, $n \in \mathbb{N}^*$ of independent and identically distributed variables following the Pareto distribution (type 1) with shape $a$ and scale $m$,
+the maximum likelihood estimators of $a$ and $m$ are given by $\hat{a}$ and $\hat{m}$ defined by
+$$\hat{m} = \min \{ x_{i}, 1 \leq i \leq n \}$$
+$$\hat{a} = \frac{n}{\sum_{i = 1}^{n}\ln(x_i) - n \ln(\hat{m})}$$
+
+It can be shown that $\hat{a}$ is a biased estimator of $a$, and that the adjusted estimator $\bar{a} = \frac{n-1}{n} \hat{a}$ is an unbiased
+estimator of $a$.
+
+\end{document}
